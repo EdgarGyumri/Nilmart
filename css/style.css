@@ -17,7 +17,13 @@ body.active {
   left: 0;
   z-index: 5;
   background: #000;
-  opacity: .5; }
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+
+.overlay.active {
+  opacity: .5 !important; }
 
 p, ul {
   margin-bottom: 0 !important; }
@@ -378,6 +384,15 @@ input::-webkit-input-placeholder {
       width: 100%; }
       .mobile-menu__block div:nth-child(2) svg {
         width: 25px; }
+    .mobile-menu__list {
+      position: relative;
+      left: -100%;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+
+.mobile-menu__list.active {
+  left: 0; }
 
 .burger-menu {
   position: relative;
@@ -496,6 +511,8 @@ input::-webkit-input-placeholder {
       list-style: none;
       background: #fff;
       width: 70%;
+      height: 520px;
+      overflow: auto;
       border: 1px solid #d6d6d6;
       padding-top: 15px;
       margin-top: 55px; }

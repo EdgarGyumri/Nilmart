@@ -1,5 +1,7 @@
 const perfumeTopItemBlock = document.querySelector('.perfume-top__item-block');
 const cosmeticsFilters = document.querySelector('.cosmetics-filters');
+const burgerMenu = document.querySelector('.burger-menu');
+const mobileMenuList = document.querySelector('.mobile-menu__list');
 // const cosmeticsType = document.querySelector('.cosmetics-type1');
 // const brandsType = document.querySelector('.cosmetics-type2');
 
@@ -9,6 +11,11 @@ const cosmeticsFilters = document.querySelector('.cosmetics-filters');
 
 // for()
 
+burgerMenu.addEventListener('click', event => {
+    mobileMenuList.classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active')
+    document.querySelector('body').classList.toggle('active')
+})
 
 cosmeticsFilters.addEventListener('click', event => {
     if(event.target.tagName == "SPAN") {
