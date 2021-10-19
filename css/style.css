@@ -1,0 +1,522 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body.active {
+  overflow: hidden; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #000;
+  opacity: .5; }
+
+p, ul {
+  margin-bottom: 0 !important; }
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0; }
+
+input::-webkit-input-placeholder {
+  color: white; }
+
+.header-top {
+  padding: 15px 0;
+  background-color: #F6F6F6; }
+  .header-top svg {
+    width: 13px; }
+
+.header-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header-list__item {
+    list-style: none;
+    margin-right: 40px; }
+    .header-list__item a {
+      color: #222222; }
+
+.header-block p:first-child {
+  margin-right: 30px; }
+
+.header-nav {
+  padding-top: 20px; }
+  .header-nav__item:first-child {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid #D6D6D6; }
+    .header-nav__item:first-child svg {
+      width: 17px;
+      margin-left: 60px; }
+    .header-nav__item:first-child input {
+      border: none;
+      outline: none; }
+  .header-nav__item:last-child {
+    margin-left: 50px;
+    padding: 15px;
+    background: -webkit-gradient(linear, left top, right top, from(#fdb806), color-stop(100%, #fd8006), to(#00d4ff));
+    background: -o-linear-gradient(left, #fdb806 0%, #fd8006 100%, #00d4ff 100%);
+    background: linear-gradient(90deg, #fdb806 0%, #fd8006 100%, #00d4ff 100%); }
+    .header-nav__item:last-child svg {
+      width: 22px;
+      color: #fff; }
+  .header-nav__brands {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .header-nav__brands img {
+      margin-right: 15px; }
+    .header-nav__brands p {
+      font-size: 14px; }
+  .header-nav__block:nth-child(2) {
+    margin-top: 40px; }
+
+.header-item {
+  margin-top: 25px; }
+  .header-item .container-xl {
+    background: url(../img/background-1.png);
+    padding: 75px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; }
+  .header-item .carousel {
+    position: static; }
+  .header-item .carousel-indicators {
+    position: absolute;
+    right: 0; }
+    .header-item .carousel-indicators button {
+      padding: 10px 1px;
+      border-radius: 100%;
+      width: 21px;
+      border: 2px solid #fff; }
+    .header-item .carousel-indicators button.active {
+      background-color: #FD8006; }
+  .header-item__block {
+    color: #fff;
+    margin-left: 55px; }
+    .header-item__block h1 {
+      font-size: 35px;
+      font-weight: bold; }
+    .header-item__block h2 {
+      font-size: 16px;
+      margin: 15px 0 25px; }
+      .header-item__block h2 span {
+        font-weight: bold; }
+    .header-item__block input {
+      background: transparent;
+      border: 1px solid #FFFFFF;
+      outline: none;
+      padding: 17px 0 17px 17px; }
+    .header-item__block input:first-child {
+      margin-right: 10px; }
+    .header-item__block p {
+      font-size: 13px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      opacity: .5;
+      margin-top: 8px; }
+      .header-item__block p svg {
+        width: 14px;
+        margin-right: 8px; }
+    .header-item__block a {
+      font-weight: bold;
+      background: -webkit-gradient(linear, left top, right top, from(#fdb806), color-stop(100%, #fd8006), to(#00d4ff));
+      background: -o-linear-gradient(left, #fdb806 0%, #fd8006 100%, #00d4ff 100%);
+      background: linear-gradient(90deg, #fdb806 0%, #fd8006 100%, #00d4ff 100%);
+      padding: 20px 25px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: 15px;
+      display: inline-block; }
+      .header-item__block a img {
+        margin-right: 6px; }
+
+.perfume {
+  padding-top: 55px; }
+  .perfume-top h2 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px; }
+  .perfume-top__item {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .perfume-top__item p {
+      font-size: 14px;
+      border-right: 1px solid #D1D1D1;
+      padding-right: 22px;
+      margin-right: 25px; }
+    .perfume-top__item-block span {
+      border: 1px solid #999999;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 10px 65px;
+      color: #222;
+      cursor: pointer;
+      margin-right: 10px;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+    .perfume-top__item-block span:hover {
+      background: #8BB655;
+      border-color: #8BB655;
+      color: #fff; }
+    .perfume-top__item-block span.active {
+      background: #8BB655;
+      border-color: #8BB655;
+      color: #fff; }
+  .perfume-body {
+    margin-top: 50px; }
+  .perfume-card {
+    width: 25%; }
+    .perfume-card__item:first-child {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: space-evenly;
+      -webkit-justify-content: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; }
+    .perfume-card__item:nth-child(2) {
+      margin-top: 40px; }
+      .perfume-card__item:nth-child(2) img {
+        display: block;
+        margin: 0 auto; }
+    .perfume-card__price {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-top: 30px; }
+      .perfume-card__price p:first-child {
+        margin-right: 10px;
+        color: #FD8006;
+        font-size: 18px;
+        font-weight: 500; }
+      .perfume-card__price p:last-child {
+        color: #222222;
+        font-size: 15px;
+        text-decoration: line-through; }
+    .perfume-card__preferences {
+      margin: 10px 0; }
+      .perfume-card__preferences img {
+        margin-right: 15px; }
+    .perfume-card__about h3 {
+      font-size: 16px;
+      color: #222222; }
+    .perfume-card__about h4 {
+      font-size: 13px;
+      color: #7A7A7A; }
+    .perfume-card__raiting {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 10px; }
+      .perfume-card__raiting svg {
+        width: 12px;
+        color: #C5C5C5;
+        margin-right: 3px;
+        cursor: pointer; }
+      .perfume-card__raiting svg.active {
+        color: #FDB806; }
+    .perfume-card__order {
+      display: none;
+      padding: 6px 12px;
+      border-radius: 1px;
+      margin-top: 12px;
+      background: -webkit-gradient(linear, left top, right top, from(#fdb806), color-stop(100%, #fd8006), to(#00d4ff));
+      background: -o-linear-gradient(left, #fdb806 0%, #fd8006 100%, #00d4ff 100%);
+      background: linear-gradient(90deg, #fdb806 0%, #fd8006 100%, #00d4ff 100%); }
+      .perfume-card__order a {
+        color: #fff;
+        text-decoration: none; }
+        .perfume-card__order a svg {
+          width: 12px;
+          margin-right: 5px; }
+  .perfume-block:last-child {
+    margin-top: 45px; }
+  .perfume-block {
+    overflow: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .perfume-link {
+    color: #222222;
+    text-decoration: none;
+    padding: 15px 25px;
+    border: 1px solid #666;
+    display: block;
+    width: 204px;
+    margin: 50px auto 0; }
+    .perfume-link svg {
+      width: 10px;
+      color: #444; }
+
+.cosmetics {
+  padding-top: 50px; }
+  .cosmetics-title h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-right: 25px; }
+  .cosmetics-top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .cosmetics-close {
+    width: 8px !important;
+    color: #AEAEAE; }
+  .cosmetics-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .cosmetics-item p {
+      margin-right: 3px; }
+    .cosmetics-item__element {
+      margin-right: 10px;
+      cursor: pointer; }
+  .cosmetics-item:first-child span {
+    cursor: pointer; }
+  .cosmetics-item:last-child {
+    border: 1px solid #ED2424;
+    padding: 10px 20px;
+    cursor: pointer; }
+    .cosmetics-item:last-child p {
+      margin-right: 0;
+      color: #ED2424;
+      font-size: 14px; }
+      .cosmetics-item:last-child p svg {
+        color: #ED2424;
+        margin-bottom: 3px;
+        width: 13px !important; }
+  .cosmetics-text {
+    color: #FD8006; }
+  .cosmetics-filters {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.mobile {
+  display: none;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  top: 0 !important;
+  padding: 10px 0 0; }
+  .mobile-menu {
+    position: absolute;
+    top: 10px; }
+    .mobile-menu__block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: absolute;
+      background: #fff;
+      left: 0;
+      top: 0;
+      width: 100%; }
+      .mobile-menu__block div:nth-child(2) svg {
+        width: 25px; }
+
+.burger-menu {
+  position: relative;
+  cursor: pointer;
+  height: 20px; }
+
+.burger-menu span {
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block; }
+
+.burger-menu::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block;
+  top: 9px; }
+
+.burger-menu::before {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  display: block;
+  bottom: 0; }
+
+@media screen and (max-width: 1220px) {
+  .header-block, .header-list li a {
+    font-size: 14px; } }
+
+@media screen and (max-width: 1000px) {
+  .perfume-card {
+    width: 100%; }
+  .perfume-card__item {
+    width: 250px; }
+  .perfume-card__order {
+    display: inline-block;
+    width: 120px; } }
+
+@media screen and (max-width: 900px) {
+  .header-top__block {
+    text-align: center; }
+  .header-list {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px; }
+  .header-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .header-block p:last-child {
+      margin-top: 10px; } }
+
+@media screen and (max-width: 800px) {
+  .carousel {
+    margin-top: 50px; }
+  .header-nav__block:first-child {
+    display: none; }
+    .header-nav__block:first-child div {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .header-nav__brands {
+    margin-top: 30px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start; }
+  .header-logo a img {
+    display: block;
+    margin: 0 auto; }
+  .header-top {
+    display: none; }
+  .header-element {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+  .header-item {
+    margin-top: 65px; }
+    .header-item__block {
+      margin-left: 0;
+      text-align: center; }
+      .header-item__block h1 {
+        font-size: 28px; }
+      .header-item__block h2 {
+        font-size: 14px; }
+      .header-item__block input:first-child {
+        margin: 0 0 20px; }
+      .header-item__block p {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+  .mobile {
+    display: block; }
+    .mobile-menu__block {
+      padding: 12px 10px; }
+      .mobile-menu__block div svg {
+        width: 25px; }
+    .mobile-menu__list {
+      list-style: none;
+      background: #fff;
+      width: 70%;
+      border: 1px solid #d6d6d6;
+      padding-top: 15px;
+      margin-top: 55px; }
+      .mobile-menu__list-item {
+        border-bottom: 1px solid #D6D6D6;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .mobile-menu__list-item svg {
+          width: 6px; }
+      .mobile-menu__list-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0; }
+      .mobile-menu__list-link {
+        text-decoration: none;
+        color: #222;
+        font-size: 14px; } }
