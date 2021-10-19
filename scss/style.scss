@@ -6,11 +6,16 @@
     box-sizing: border-box;
 }
 
+.row{
+    --bs-gutter-x: 0;
+}
+
 body.active{
     overflow: hidden;
 }
 
 .overlay{
+    display: none;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -18,12 +23,12 @@ body.active{
     left: 0;
     z-index: 5;
     background: #000;
-    opacity: 0;
+    opacity: .5;
     transition: all .5s;
 }
 
 .overlay.active{
-    opacity: .5 !important;
+    display: block;
 }
 
 p, ul{
@@ -179,6 +184,17 @@ input::-webkit-input-placeholder { color: white; }
 
 .perfume{
     padding-top: 55px;
+    &-discount{
+        padding: 5px 10px;
+        border: 1px solid #E2E2E2;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 1px;
+        color: #739B41;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     &-top{
         h2{
             font-size: 30px;
@@ -204,6 +220,8 @@ input::-webkit-input-placeholder { color: white; }
                     cursor: pointer;
                     margin-right: 10px;
                     transition: all .5s;
+                    margin-top: 10px;
+                    display: inline-block;
                 }
                 span:hover{
                     background: #8BB655;
@@ -222,6 +240,7 @@ input::-webkit-input-placeholder { color: white; }
         margin-top: 50px;
     }
     &-card{
+        position: relative;
         width: 25%;
         &__item:first-child{
             display: flex;
@@ -310,10 +329,20 @@ input::-webkit-input-placeholder { color: white; }
         display: block;
         width: 204px;
         margin: 50px auto 0;
+        transition: all .5s;
         svg{
             width: 10px;
             color: #444;
+            transition: all .5s;
         }
+    }
+    &-link:hover{
+        border-color: #FFBB3B;
+        color: #fff;
+        background: linear-gradient(180deg, #FFBB3B 0%, #FFA800 100%), linear-gradient(180deg, #D89E08 -61.02%, #D46B05 167.8%), #8BB655;
+    }
+    &-link:hover > svg{
+        color: #fff;
     }
 }
 
@@ -372,8 +401,79 @@ input::-webkit-input-placeholder { color: white; }
         display: flex;
         align-items: center;
     }
+    &-filter{
+        margin-bottom: 55px;
+    }
 }
 
+.subscribe{
+    margin-top: 50px;
+    .container-xl{
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.19);
+        padding-left: 0;
+        padding-right: 0;
+        padding: 20px;
+    }
+    &-block{
+        background: url(../img/background-2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid #DEB84A;
+        padding: 65px 0;
+    }
+    &-top{
+        h2{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            width: 750px;
+            margin: 0 auto;
+            span{
+                color: #FD8006;
+            }
+        }
+    }
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        &__item{
+            form{
+                display: inline-flex;
+                flex-direction: column;
+                label{
+                    font-size: 14px;
+                    color: #222;
+                    letter-spacing: 1px;
+                }
+                input{
+                    padding: 9px 50px 9px 15px;
+                    border: 1px solid #D6D6D6;
+                    border-radius: 2px;
+                    margin-top: 5px;
+                    font-size: 15px;
+                    color: #7D7D7D;
+                }
+            }
+        }
+        &__item:last-child{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            a{
+                width: 31%;
+                text-decoration: none;
+                font-weight: bold;
+                color: #fff;
+                background: linear-gradient(180deg, #FDB806 -61.02%, #FD8006 167.8%);
+                box-shadow: 0px 4px 13px rgba(255, 126, 0, 0.6);
+                border-radius: 2px;
+                padding: 20px 70px 20px 60px;
+            }
+        }
+    }
+}
 
 .mobile{
     display: none;
@@ -481,6 +581,11 @@ input::-webkit-input-placeholder { color: white; }
             }
         }
     }
+    .cosmetics{
+        &-top{
+            flex-direction: column;
+        }
+    }
 }
 
 @media screen and (max-width:800px){
@@ -546,7 +651,7 @@ input::-webkit-input-placeholder { color: white; }
                 list-style: none;
                 background: #fff;
                 width: 70%;
-                height: 520px;
+                height: 420px;
                 overflow: auto;
                 border: 1px solid #d6d6d6;
                 padding-top: 15px;
@@ -571,6 +676,96 @@ input::-webkit-input-placeholder { color: white; }
                     font-size: 14px;
                 }
             }
+        }
+    }
+    .perfume{
+        &-top{
+            &__item{
+                &-block{
+                    span{
+                        width: 180px;
+                        padding: 10px 0;
+                        text-align: center;
+                    }
+                }
+                p{
+                    transform: rotate(-90deg) translateY(71px) translateX(9px);
+                    border: none;
+                }
+            }
+        }
+    }
+    .cosmetics .perfume-top__item p{
+        transform: none;
+    }
+    .subscribe{
+        &-top{
+            h2{
+                width: 90%;
+            }
+        }
+        &-body{
+            &__item:last-child{
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cosmetics{
+        &-top{
+            align-items: start;
+            &__item{
+                display: block;
+            }
+        }
+        &-filters{
+            flex-direction: column;
+            align-items: start;
+        }
+        &-item:first-child{
+            margin-bottom: 20px;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    .subscribe{
+        &-body{
+            &__item:last-child{
+                a{
+                    padding: 20px 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 520px){
+    .perfume{
+        &-top{
+            &__item{
+                p{
+                    transform: rotate(-90deg) translateY(120px) translateX(9px);
+                }
+            }
+        }
+    }
+    .subscribe{
+        &-body{
+            &__item:last-child{
+                flex-direction: column;
+                align-items: center;
+                a{
+                    margin-bottom: 20px;
+                    width: 90%;
+                }
+            }
+        }
+        &-block{
+            background: none;
         }
     }
 }

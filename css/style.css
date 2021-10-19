@@ -6,10 +6,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+.row {
+  --bs-gutter-x: 0; }
+
 body.active {
   overflow: hidden; }
 
 .overlay {
+  display: none;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -17,13 +21,13 @@ body.active {
   left: 0;
   z-index: 5;
   background: #000;
-  opacity: 0;
+  opacity: .5;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s; }
 
 .overlay.active {
-  opacity: .5 !important; }
+  display: block; }
 
 p, ul {
   margin-bottom: 0 !important; }
@@ -175,6 +179,17 @@ input::-webkit-input-placeholder {
 
 .perfume {
   padding-top: 55px; }
+  .perfume-discount {
+    padding: 5px 10px;
+    border: 1px solid #E2E2E2;
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    color: #739B41;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0; }
   .perfume-top h2 {
     font-size: 30px;
     font-weight: bold;
@@ -200,7 +215,9 @@ input::-webkit-input-placeholder {
       margin-right: 10px;
       -webkit-transition: all .5s;
       -o-transition: all .5s;
-      transition: all .5s; }
+      transition: all .5s;
+      margin-top: 10px;
+      display: inline-block; }
     .perfume-top__item-block span:hover {
       background: #8BB655;
       border-color: #8BB655;
@@ -212,6 +229,7 @@ input::-webkit-input-placeholder {
   .perfume-body {
     margin-top: 50px; }
   .perfume-card {
+    position: relative;
     width: 25%; }
     .perfume-card__item:first-child {
       display: -webkit-box;
@@ -298,10 +316,24 @@ input::-webkit-input-placeholder {
     border: 1px solid #666;
     display: block;
     width: 204px;
-    margin: 50px auto 0; }
+    margin: 50px auto 0;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
     .perfume-link svg {
       width: 10px;
-      color: #444; }
+      color: #444;
+      -webkit-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s; }
+  .perfume-link:hover {
+    border-color: #FFBB3B;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFBB3B), to(#FFA800)), -webkit-gradient(linear, left top, left bottom, color-stop(-61.02%, #D89E08), color-stop(167.8%, #D46B05)), #8BB655;
+    background: -o-linear-gradient(top, #FFBB3B 0%, #FFA800 100%), -o-linear-gradient(top, #D89E08 -61.02%, #D46B05 167.8%), #8BB655;
+    background: linear-gradient(180deg, #FFBB3B 0%, #FFA800 100%), linear-gradient(180deg, #D89E08 -61.02%, #D46B05 167.8%), #8BB655; }
+  .perfume-link:hover > svg {
+    color: #fff; }
 
 .cosmetics {
   padding-top: 50px; }
@@ -357,6 +389,89 @@ input::-webkit-input-placeholder {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .cosmetics-filter {
+    margin-bottom: 55px; }
+
+.subscribe {
+  margin-top: 50px; }
+  .subscribe .container-xl {
+    -webkit-box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.19);
+            box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.19);
+    padding-left: 0;
+    padding-right: 0;
+    padding: 20px; }
+  .subscribe-block {
+    background: url(../img/background-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #DEB84A;
+    padding: 65px 0; }
+  .subscribe-top h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 750px;
+    margin: 0 auto; }
+    .subscribe-top h2 span {
+      color: #FD8006; }
+  .subscribe-body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 30px; }
+    .subscribe-body__item form {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .subscribe-body__item form label {
+        font-size: 14px;
+        color: #222;
+        letter-spacing: 1px; }
+      .subscribe-body__item form input {
+        padding: 9px 50px 9px 15px;
+        border: 1px solid #D6D6D6;
+        border-radius: 2px;
+        margin-top: 5px;
+        font-size: 15px;
+        color: #7D7D7D; }
+    .subscribe-body__item:last-child {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-top: 20px; }
+      .subscribe-body__item:last-child a {
+        width: 31%;
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(-61.02%, #FDB806), color-stop(167.8%, #FD8006));
+        background: -o-linear-gradient(top, #FDB806 -61.02%, #FD8006 167.8%);
+        background: linear-gradient(180deg, #FDB806 -61.02%, #FD8006 167.8%);
+        -webkit-box-shadow: 0px 4px 13px rgba(255, 126, 0, 0.6);
+                box-shadow: 0px 4px 13px rgba(255, 126, 0, 0.6);
+        border-radius: 2px;
+        padding: 20px 70px 20px 60px; }
 
 .mobile {
   display: none;
@@ -452,7 +567,13 @@ input::-webkit-input-placeholder {
         -ms-flex-direction: column;
             flex-direction: column; }
     .header-block p:last-child {
-      margin-top: 10px; } }
+      margin-top: 10px; }
+  .cosmetics-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 @media screen and (max-width: 800px) {
   .carousel {
@@ -511,7 +632,7 @@ input::-webkit-input-placeholder {
       list-style: none;
       background: #fff;
       width: 70%;
-      height: 520px;
+      height: 420px;
       overflow: auto;
       border: 1px solid #d6d6d6;
       padding-top: 15px;
@@ -536,4 +657,78 @@ input::-webkit-input-placeholder {
       .mobile-menu__list-link {
         text-decoration: none;
         color: #222;
-        font-size: 14px; } }
+        font-size: 14px; }
+  .perfume-top__item-block span {
+    width: 180px;
+    padding: 10px 0;
+    text-align: center; }
+  .perfume-top__item p {
+    -webkit-transform: rotate(-90deg) translateY(71px) translateX(9px);
+        -ms-transform: rotate(-90deg) translateY(71px) translateX(9px);
+            transform: rotate(-90deg) translateY(71px) translateX(9px);
+    border: none; }
+  .cosmetics .perfume-top__item p {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
+  .subscribe-top h2 {
+    width: 90%; }
+  .subscribe-body__item:last-child {
+    width: 100%;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
+
+@media screen and (max-width: 700px) {
+  .cosmetics-top {
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start; }
+    .cosmetics-top__item {
+      display: block; }
+  .cosmetics-filters {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start; }
+  .cosmetics-item:first-child {
+    margin-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start; }
+  .subscribe-body__item:last-child a {
+    padding: 20px 0;
+    text-align: center; } }
+
+@media screen and (max-width: 520px) {
+  .perfume-top__item p {
+    -webkit-transform: rotate(-90deg) translateY(120px) translateX(9px);
+        -ms-transform: rotate(-90deg) translateY(120px) translateX(9px);
+            transform: rotate(-90deg) translateY(120px) translateX(9px); }
+  .subscribe-body__item:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .subscribe-body__item:last-child a {
+      margin-bottom: 20px;
+      width: 90%; }
+  .subscribe-block {
+    background: none; } }
