@@ -2793,7 +2793,7 @@ input::-webkit-input-placeholder {
     .mobile-menu__item {
       background: #fff;
       width: 70%;
-      height: 560px;
+      height: 1000px;
       overflow: auto;
       border: 1px solid #d6d6d6; }
     .mobile-menu__block {
@@ -2803,7 +2803,9 @@ input::-webkit-input-placeholder {
     .mobile-menu__list {
       list-style: none;
       padding-top: 15px;
-      margin-top: 55px; }
+      margin-top: 55px;
+      height: 560px;
+      overflow: auto; }
       .mobile-menu__list-item {
         border-bottom: 1px solid #D6D6D6;
         padding-bottom: 15px;
@@ -3056,6 +3058,8 @@ input::-webkit-input-placeholder {
       top: 130%; }
   .combo-block__item-product a {
     text-align: center; }
+  .combo-content__body-link {
+    padding: 20px 15px; }
   .services-block__item:nth-child(2) {
     width: 100%;
     display: -webkit-inline-box;
@@ -3098,4 +3102,7 @@ input::-webkit-input-placeholder {
   .data-block__body-form div {
     width: 90%; }
     .data-block__body-form div input {
-      width: 100%; } }
+      width: 100%; }
+  .perfume-card__order a {
+    padding: 10px 18px;
+    margin-top: 5px; } }

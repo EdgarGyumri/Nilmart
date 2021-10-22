@@ -2856,7 +2856,7 @@ input::-webkit-input-placeholder { color: white; }
             &__item{
                 background: #fff;
                 width: 70%;
-                height: 560px;
+                height: 1000px;
                 overflow: auto;
                 border: 1px solid #d6d6d6;
             }
@@ -2872,6 +2872,8 @@ input::-webkit-input-placeholder { color: white; }
                 list-style: none;
                 padding-top: 15px;
                 margin-top: 55px;
+                height: 560px;
+                overflow: auto;
                 &-item{
                     border-bottom: 1px solid #D6D6D6;
                     padding-bottom: 15px;
@@ -3239,6 +3241,13 @@ input::-webkit-input-placeholder { color: white; }
                 }
             }
         }
+        &-content{
+            &__body{
+                &-link{
+                    padding: 20px 15px;
+                }
+            }
+        }
     }
     .services{
         &-block{
@@ -3340,6 +3349,16 @@ input::-webkit-input-placeholder { color: white; }
                             width: 100%;
                         }
                     }
+                }
+            }
+        }
+    }
+    .perfume{
+        &-card{
+            &__order{
+                a{
+                    padding: 10px 18px;
+                    margin-top: 5px;
                 }
             }
         }
