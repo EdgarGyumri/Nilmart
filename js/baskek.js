@@ -1,5 +1,3 @@
-const perfumeTopItemBlock = document.querySelector('.perfume-top__item-block');
-const cosmeticsFilters = document.querySelector('.cosmetics-filters');
 const burgerMenu = document.querySelector('.burger-menu');
 const mobileMenuItem = document.querySelector('.mobile-menu__item');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -9,6 +7,50 @@ const headerBaskekTopSpan = document.querySelector('.header-baskek__top span');
 const headerItem = document.querySelector('.header-item');
 const headerBaskekBodyCount = document.querySelector('.header-baskek__body-count');
 const headerBaskekBody = document.querySelector('.header-baskek__body');
+const deliveryBody1 = document.querySelector('.delivery-body1');
+const deliveryBody2 = document.querySelector('.delivery-body2');
+const deliveryBodyItemParts1 = document.querySelectorAll('.delivery-body__item-elem3 .delivery-body__item-part');
+const deliveryBodyItemParts2 = document.querySelectorAll('.delivery-top__item-elem4 .delivery-body__item-part');
+const deliveryBodyItemParts3 = document.querySelectorAll('.delivery-body__item-elem5 .delivery-body__item-part');
+const deliveryBodyItemParts4 = document.querySelectorAll('.delivery-top__item-elem6 .delivery-body__item-part');
+
+
+deliveryBody1.addEventListener('click', event => {
+    let targetParentElem;
+    let target = event.target;
+    console.log(target);
+    // for(let i = 0; i < deliveryBodyItemParts1; i++) {
+    //     console.log(deliveryBodyItemParts1[i]);
+    // }
+    // if(target.parentNode.parentNode.classList.contains('delivery-body__item-elem3')){
+    //     targetParentElem = target.parentNode;
+        
+    // } else if(target.parentNode.parentNode.parentNode.classList.contains('delivery-body__item-elem3')) {
+    //     targetParentElem = target.parentNode.parentNode;
+        
+    //     for(let i = 0; i < deliveryBodyItemParts1; i++) {
+    //         console.log(deliveryBodyItemParts1[i]);
+    //     }
+    // }
+})
+
+// deliveryBody1.addEventListener('click', event => {
+//     let targetParentElem;
+//     let target = event.target;
+//     if(target.parentNode.parentNode.classList.contains('delivery-body__item-elem3')){
+//         targetParentElem = target.parentNode;
+        
+//         for(let i = 0; i < deliveryBodyItemParts1; i++) {
+//             console.log(deliveryBodyItemParts1[i]);
+//         }
+//     } else if(target.parentNode.parentNode.parentNode.classList.contains('delivery-body__item-elem3')) {
+//         targetParentElem = target.parentNode.parentNode;
+        
+//         for(let i = 0; i < deliveryBodyItemParts1; i++) {
+//             console.log(deliveryBodyItemParts1[i]);
+//         }
+//     }
+// })
 
 headerBaskekBody.addEventListener('click', event => {
     let target = event.target;
@@ -41,7 +83,7 @@ headerBaskekBodyCount.addEventListener('click', event => {
     }
 
     if(count == 0) {
-        target.classList.add('inactive');
+        target.classsList.add('inactive');
     }
 })
 
@@ -60,17 +102,6 @@ burgerMenu.addEventListener('click', event => {
     burgerMenu.classList.toggle('active')
     document.querySelector('.overlay').classList.toggle('active')
     document.querySelector('body').classList.toggle('active')
-})
-
-cosmeticsFilters.addEventListener('click', event => {
-    if(event.target.tagName == "SPAN") {
-        let parentNode = event.target.parentNode.parentNode;
-        parentNode.removeChild(event.target.parentNode)
-    }
-})
-
-perfumeTopItemBlock.addEventListener('click', event => {
-    event.target.classList.toggle('active')
 })
 
 const anchors = document.querySelectorAll('a[href*="#"');
